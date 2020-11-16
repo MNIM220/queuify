@@ -3,8 +3,8 @@ package broker
 import "github.com/streadway/amqp"
 
 type Consumer struct {
-	ch amqp.Channel
-	q  amqp.Queue
+	Channel *amqp.Channel
+	Queue   *amqp.Queue
 }
 
 func (c *Consumer) DefaultConsumer() (<-chan amqp.Delivery, error) {
